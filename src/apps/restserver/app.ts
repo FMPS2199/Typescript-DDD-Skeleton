@@ -1,6 +1,6 @@
 import Express from 'express';
-import { AllTodosSearcher } from '../../contexts/todo_list/todo/application/SearchAll/AllTodosSearcher';
-import { MysqlSequelizeRepository } from '../../contexts/todo_list/todo/infraestructure/persistence/mysql_sequelize_respository';
+import { AllTodosSearcher } from '../../Contexts/TodoList/Todo/Application/SearchAll/AllTodosSearcher';
+import { MysqlSequelizeRepository } from '../../Contexts/TodoList/Todo/Infraestructure/Persistence/MySqlSequelizeRepository';
 const app = Express();
 
 app.set('port', 8000);

@@ -13,12 +13,12 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 const express_1 = __importDefault(require("express"));
-const AllTodosSearcher_1 = require("../../contexts/todo_list/todo/application/SearchAll/AllTodosSearcher");
-const mysql_sequelize_respository_1 = require("../../contexts/todo_list/todo/infraestructure/persistence/mysql_sequelize_respository");
+const AllTodosSearcher_1 = require("../../Contexts/TodoList/Todo/Application/SearchAll/AllTodosSearcher");
+const MySqlSequelizeRepository_1 = require("../../Contexts/TodoList/Todo/Infraestructure/Persistence/MySqlSequelizeRepository");
 const app = express_1.default();
 app.set('port', 8000);
 app.get('/', (req, res) => __awaiter(void 0, void 0, void 0, function* () {
-    const todoSearcer = new AllTodosSearcher_1.AllTodosSearcher(new mysql_sequelize_respository_1.MysqlSequelizeRepository());
+    const todoSearcer = new AllTodosSearcher_1.AllTodosSearcher(new MySqlSequelizeRepository_1.MysqlSequelizeRepository());
     res.json(yield todoSearcer.SerachAll());
 }));
 app.listen(app.get('port'), () => {

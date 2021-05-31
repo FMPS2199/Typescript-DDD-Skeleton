@@ -1,5 +1,5 @@
-import { Todo } from "../../domain/todo";
-import { todoRepository } from "../../domain/todo_repository";
+import { Todo } from "../../Domain/Todo";
+import { todoRepository } from "../../Domain/TodoRepository";
 
 export class AllTodosSearcher{
 

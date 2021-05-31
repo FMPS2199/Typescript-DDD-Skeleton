@@ -1,6 +1,6 @@
-import TodoConfiguration from "../../../shared/infraestructure/presistence/sequelizer_mysql/sequelize_configuration/todo_configuration";
-import { Todo } from "../../domain/todo";
-import { todoRepository } from "../../domain/todo_repository";
+import TodoConfiguration from "../../../Shared/Infraestructure/Presistence/SequelizeMySql/SequelizeConfigurations/TodoConfigurations";
+import { Todo } from "../../Domain/Todo";
+import { todoRepository } from "../../Domain/TodoRepository";
 
 export class MysqlSequelizeRepository implements todoRepository {
     async Save(): Promise<void> {
